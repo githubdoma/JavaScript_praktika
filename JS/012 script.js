@@ -39,4 +39,4 @@ const lastFilms = prompt("Один из последних просмотрен�
 const rating = +prompt("На сколько оцените его?",'');
 personalMovieDB.movies[lastFilms] = rating;
 }
-//console.log(personalMovieDB);
+//console.log(personalMovieDB);;

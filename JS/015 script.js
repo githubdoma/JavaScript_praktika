@@ -12,6 +12,40 @@
 
 4) Потренироваться и переписать цикл еще двумя способами*/
 
-'use strict';
 
 // Код возьмите из предыдущего домашнего задания
+'use strict';
+console.log("Привет!");
+var nuberOfFillms = +prompt('Сколько фильмов вы уже посомтрели?','');
+console.log(nuberOfFillms);
+const personalMovieDB = {
+count: nuberOfFillms,
+movies: {},
+actors:{},
+genres:[],
+privat:false
+};
+
+
+for (var i = 0; i < 2;i++) {
+const lastFilms = prompt("Один из последних просмотренных фильмов?",''),
+       rating = prompt("На сколько оцените его?",'');
+    if (lastFilms != null && rating != null && lastFilms != " " && rating != " " && lastFilms.length < 50 && rating.length < 50 ){
+        personalMovieDB.movies[lastFilms] = rating;
+        console.log("done");
+            }
+            else {
+               console.log("Произошла ошибка");
+                i--; 
+            }
+    if (personalMovieDB.count < 10){
+     console.log('Вы посмотрели немного фильмов');
+    }
+    if (personalMovieDB.count > 10 && personalMovieDB.count <30 ){
+        console.log('Вы классический зритель');
+    }
+    if (personalMovieDB.count >= 30 ){
+            console.log('Вы киноман');
+    }
+        }
+console.log(personalMovieDB);
